@@ -12,15 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from __future__ import unicode_literals
+
 from django.db import models
 
-
-class Question(models.Model):
-    question_text = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published')
-
-
-class Choice(models.Model):
-    question = models.ForeignKey(Question)
-    choice_text = models.CharField(max_length=200)
-    votes = models.IntegerField(default=0)
+class Recipe(models.Model):
+    recipe_name = models.CharField(max_length=200)
+    disease = models.CharField(max_length=200)
+    category = models.CharField(max_length=20)
+    cook = models.CharField(max_length=5)
+    ingredient = models.CharField(max_length=500)
+    img = models.CharField(max_length=300)
+    link = models.CharField(max_length=200)
+    note = models.CharField(max_length=500)
+    protien = models.FloatField()
+    fat = models.FloatField()
+    carbon = models.FloatField()
+    totalcal = models.FloatField()
+    nation = models.CharField(max_length=50)
