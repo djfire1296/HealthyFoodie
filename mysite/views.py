@@ -56,3 +56,9 @@ def login(request):
 def profile(request):
 	return render(request, 'profile.html', {})
 
+def save(request):
+	return render(request, 'save.html', {})
+
+def calc(request):
+	return render(request, 'calc.html', {})
+

@@ -25,4 +25,6 @@ urlpatterns = [
     url(r'^account/login/$', login),
     url(r'^profile/$', profile),
     url(r'^index', index),
+   	url(r'^save', save),
+   	url(r'^calc', calc),
 ]
