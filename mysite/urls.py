@@ -27,4 +27,5 @@ urlpatterns = [
     url(r'^index', index),
    	url(r'^save', save),
    	url(r'^calc', calc),
+   	url(r'^post3', post3),
 ]

@@ -62,3 +62,5 @@ def save(request):
 def calc(request):
 	return render(request, 'calc.html', {})
 
+def post3(request):
+	return render(request, 'post_3.html', {})
