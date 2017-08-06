@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Healthy Foodie</title>
+
+    {% load static %}
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'template_style/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'template_style/css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'template_style/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index/">Healthy Foodie</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index">Home</a>
+                    </li>
+                    <li>
+                        <a href="/calc/">Calculate</a>
+                    </li>
+                    <li>
+                        <!-- If not user change to log in -->
+                        <a href="contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('../static/template_style/img/grapes.jpg')">
+        <div class="container" style="width: 100vw; background: rgba(0,0,0,0.6);">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Nutrition Calculator</h1>
+                        <hr class="small">
+                        <span class="subheading">personalize your diet plan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<!-- Main Content 0 -->
+<div class="col-md-6 col-md-offset-3">
+            <form class="form-horizontal">
+
+              <div class="form-group">
+                <label for="inputAge" class="col-sm-2 col-xs-offset-1 control-label" name="age">Age:</label>
+                <div class="col-sm-2">
+                  <input type="number" class="form-control" id="inputAge" placeholder="22">
+                </div>
+                <label for="inputSex" class="col-sm-2 col-xs-offset-1 control-label">Sex:</label>
+                <div class="col-sm-2">
+                  <select class="form-control" name="sex">
+                      <option value="-1">-Select-</option>
+                      <option value="M">Male</option>
+                      <option selected="selected" value="F">Female</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="inputSex" class="col-sm-2 control-label col-xs-offset-1">Physical Activity:</label>
+                <div class="col-sm-7">
+                  <select class="form-control" name="physical">
+                    <option value="0">- What's your level of physical activity? -</option>
+                    <option value="A">0 days/week of moderate activity</option>
+                    <option value="B">1-2 days/week of moderate activity</option>
+                    <option value="C" selected="selected" >3-5 days/week of moderate activity</option>
+                    <option value="D">6-7 days/week of moderate activity</option>
+                    <option value="E">once-twice per day/week of moderate activity</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="inputHeight" class="col-sm-2 col-xs-offset-1 control-label" >Height:</label>
+                <div class="col-sm-2">
+                  <input class="form-control" id="inputHeight" placeholder="160" name="height">
+                </div>
+                <div class="col-sm-1"><p>cm</p>
+                </div>
+                <label for="inputWeight" class="col-sm-2 control-label" >Weight:</label>
+                <div class="col-sm-2">
+                  <input  class="form-control" id="inputWeight" placeholder="54" name="weight">
+                </div>
+                <div class="col-sm-1">
+                    <p>kg</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputWeight" class="col-sm-2 control-label col-xs-offset-1">Disease:</label>
+                  <div class="col-sm-4">
+                    <input type="checkbox" value="D" name="disease">
+                    Diabetes / <br>
+                    <input type="checkbox" value="K" name="disease">
+                    Kidney disease / <br>  
+                    <input type="checkbox" value="O" name="disease">
+                    Overweight
+                  </div> 
+                
+
+
+
+                <div class="col-lg-1 text-center">
+                <a href="calc/" class="btn btn-lg btn-default">Update</a>
+        </div>
+              </div>
+
+<!--
+              <div class="form-group">
+                <div class="col-sm-12 text-center">
+                        <button type="submit" class="btn btn-lg btn-default">Submit</button>
+                </div>
+              </div>
+-->
+            </form>
+        </div>
+        </div>
+
+
+        <!-- /.row -->
+        <div class="row">
+            
+        </div>
+
+    <!-- Main Content 1 -->
+    <div class="container containerone">
+        <div class="row">
+                <hr style="width: 40px; border-width: 3px;
+    border-color: #000;">
+            <div class="col-lg-12">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Meal</th>
+                      <th>#</th>
+                      <th>Protein(g)</th>
+                      <th>Fat(g)</th>
+                      <th>Carbs(g)</th>
+                      <th>Calories</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Breakfast</td>
+                      <!--
+                      <td>Triple berry medley smoothie</td> https://screenshots.en.sftcdn.net/en/scrn/69746000/69746765/breakfast-food-recipe-05-100x100.png-->
+                      <td>{{ bn }}</td>
+                      <td height=100 width=100><img src="{{ bimg }}"></td>
+                      <td>{{ bp }}</td>
+                      <td>{{ bf }}</td>
+                      <td>{{ bc }}</td>
+                      <td>{{ bt }}</td>
+                    </tr>
+                    <tr>
+                      <td>Lunch</td>
+                      <!--
+                      <td>Tropical chicken salad</td>-->
+                      <td>{{ bn }}</td>
+                      <td height=100 width=100><img src="{{ bimg }}"></td>
+                      <td>{{ bp }}</td>
+                      <td>{{ bf }}</td>
+                      <td>{{ bc }}</td>
+                      <td>{{ bt }}</td>
+                    </tr>
+                    <tr>
+                      <td>Dinner</td>
+                      <!--
+                      <td>Shrimp stir-fry</td>-->
+                      <td>{{ bn }}</td>
+                      <td height=100 width=100><img src="{{ bimg }}"></td>
+                      <td>{{ bp }}</td>
+                      <td>{{ bf }}</td>
+                      <td>{{ bc }}</td>
+                      <td>{{ bt }}</td>
+                    </tr>
+                    <tr>
+                      <td>Total</td>
+                      <td></td>
+                      <td></td>
+                      <td>{{ tp }}</td>
+                      <td>{{ tf }}</td>
+                      <td>{{ tc }}</td>
+                      <td>{{ tt }}</td>
+                    </tr>
+                    <tr>
+                      <td>tips</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>too much</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row text-center">
+            <a href="#" class="btn btn-lg btn-default">Save</a>
+        </div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; Healthy Foodie 2017</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="{% static 'template_style/js/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'template_style/js/bootstrap.min.js' %}"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="{% static 'template_style/js/jqBootstrapValidation.js' %}"></script>
+    <script src="{% static 'template_style/js/contact_me.js' %}"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="{% static 'template_style/js/clean-blog.min.js' %}"></script>
+
+</body>
+
+</html>
